@@ -1,0 +1,55 @@
+nav {
+    padding: 20px 15px;
+    background-color: rgb(0, 0, 0, 0.8);
+    color: #fff;
+}
+
+nav #navbar__brand {
+    font-size: 20px;
+    font-weight: 700;
+
+}
+
+nav ul {
+    margin-top: -20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+#nav__btn {
+    float: right; 
+    margin-top: -35px;
+
+}
+/* 
+nav button{
+    background-color: green;
+    color: #fff;
+    padding: 5px;
+    border: 1px solid green;
+    border-radius: 5px;
+} */
+
+@media (max-width: 700px) {
+    nav ul{
+        display: none;
+    }
+}
+
+footer{
+    background-color: rgb(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 20px;
+    
+}

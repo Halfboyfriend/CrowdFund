@@ -1,0 +1,23 @@
+body{
+    overflow-x: hidden;
+}
+#header{
+    margin-top: 20px;
+}
+.landingPage{
+    margin: 10px;
+    display: grid;
+    gap: 5px;
+}
+#text-header{
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .landingPage {
+      grid-template-columns: 1fr; /* Two columns for desktop */
+    }
+    button{
+        margin-top: 20px;
+    }
+  }
