@@ -8,12 +8,13 @@ import { ethers } from "ethers";
 import campaignAbi from "../constants/projectCampaign";
 import formatter from "../utils/settings";
 import RequestRow from "../components/RequestRow";
-import "./Home.css"
+import "./Home.css";
 
 function ViewRequest() {
   const params = useParams();
   const contractAddress = params.contract;
-  const [approve, setApprove] = useState('');
+  const [approve, setApprove] = useState("");
+  const [count, setCount] = useState(null);
   const getRequests = async () => {
     const { provider } = await connectWallet();
     const Contract = new ethers.Contract(
@@ -21,10 +22,10 @@ function ViewRequest() {
       campaignAbi,
       provider
     );
-    // const requestCount = await Contract.requestCount();
+    const requestCount = await Contract.requestCount();
+    setCount(requestCount.toNumber())
     const approval = await Contract.listApprovers();
-   setApprove(approval.toNumber());
-
+    setApprove(approval.toNumber());
 
     const Requests = await Contract.getRequests();
     console.log(Requests);
@@ -52,15 +53,22 @@ function ViewRequest() {
     ));
   };
 
-  const { Header, Body, Row, HeaderCell } = Table;
+  const { Header, Body, Row, HeaderCell, Cell } = Table;
   return (
     <Layout>
-      <h2 id="text-header">All pending requests of {formatter(contractAddress)} Campaign </h2>
+      <h2 id="text-header">
+        All pending requests of {formatter(contractAddress)} Campaign{" "}
+      </h2>
       <Link to={`/campaigns/${contractAddress}`}>
-        <Button primary  content="back" />
+        <Button primary content="back" />
       </Link>
       <Link to={`/campaigns/${contractAddress}/requests/new`}>
-        <Button primary floated="right" content="Create Request" style={{marginBottom: "20px"}} />
+        <Button
+          primary
+          floated="right"
+          content="Create Request"
+          style={{ marginBottom: "20px" }}
+        />
       </Link>
       <br />
       <Table>
@@ -75,8 +83,12 @@ function ViewRequest() {
             <HeaderCell>Finalize</HeaderCell>
           </Row>
         </Header>
-        <Body>{renderRow(requests)}</Body>
+        <Body>
+        {count > 0 ? renderRow(requests) : <p className="text-center">NO REQUEST YET</p> }
+        
+        </Body>
       </Table>
+
     </Layout>
   );
 }

@@ -86,8 +86,8 @@ class RequestRow extends Component {
     const { id, request, approval } = this.props;
     const readyToFinalize = request.approvalCount.toNumber() > approval / 2;
     return (
-   
-         <Row disabled={request.complete} positive={readyToFinalize}>
+         <React.Fragment>
+            <Row disabled={request.complete} positive={readyToFinalize}>
         <Cell> {id + 1} </Cell>
         <Cell> {request.description} </Cell>
         <Cell> {ethers.utils.formatEther(request.amount.toNumber())} </Cell>
@@ -117,6 +117,7 @@ class RequestRow extends Component {
 
 
       </Row>
+         </React.Fragment>
       
     );
   }
