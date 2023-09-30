@@ -91,9 +91,17 @@ class About extends Component {
             recipient's account, and the spending request is marked as
             "COMPLETED."
           </p>
+
+          <Header as="h4">Don't have Goerli Ether?</Header>
+          <p>Claim free goerli faucet here!!!</p>
           <p>
-            
+            <a href="https://faucet.polygon.technology">Moralis</a> <br />
+            <a href="https://goerlifaucet.com/">Alchemy</a> <br />
+            <a href=" https://faucet.goerli.linea.build/">Linea</a>
           </p>
+          <p>THANKS FOR TESTING WITH US</p>
+          <br />
+          <br />
         </div>
       </Layout>
     );
