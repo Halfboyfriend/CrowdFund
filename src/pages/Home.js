@@ -53,6 +53,10 @@ class Home extends Component {
         
           {deployedAddress ? this.renderCampaigns() : "No Campaign"}
         
+
+          <Link to='/about'>
+            <a href="/about"> How does it works? </a>
+         </Link>
         </div>
         </Layout>
 

@@ -37,7 +37,13 @@ const connectWallet = async () => {
       }
 
     } else {
-      console.log("Ethereum not found");
+      Swal.fire({
+        text: `Metamask Not Found, Please install metamask extension and try again`,
+        icon: "error",
+        padding: "3em",
+        color: "#716add",
+        backdrop: `rgba(0,0,0,0.8)`,
+      });
     }
     return {userAddress, instance, signer, provider};
 };
