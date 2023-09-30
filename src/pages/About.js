@@ -23,7 +23,7 @@ class About extends Component {
             requirements can create campaigns to secure financial backing.
           </p>
 
-          <Container>
+          {/* <Container>
             <Embed
               autoplay={false}
               brandedUI
@@ -39,7 +39,7 @@ class About extends Component {
               placeholder="/images/image-16by9.png"
               source="youtube"
             />
-          </Container>
+          </Container> */}
 
           <Header as="h3">Creating a Campaign</Header>
           <p>
@@ -90,6 +90,9 @@ class About extends Component {
             At this point, the funds are transferred to the designated
             recipient's account, and the spending request is marked as
             "COMPLETED."
+          </p>
+          <p>
+            
           </p>
         </div>
       </Layout>
