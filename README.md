@@ -1,4 +1,4 @@
-# Getting Started with 0x3Decoid crowd funding app
+# Getting Started with 0x3Devoid crowd funding app
 
 Project Live url [Ox3CrowFund](https://crowd-fund-one.vercel.app/). Dapp
 
