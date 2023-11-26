@@ -92,12 +92,13 @@ class About extends Component {
             "COMPLETED."
           </p>
 
-          <Header as="h4">Don't have Goerli Ether?</Header>
-          <p>Claim free goerli faucet here!!!</p>
+          <Header as="h4">Don't have Base Sapolia Ether?</Header>
+          <p>Claim free Base Sapolia faucet here!!!</p>
           <p>
-            <a href="https://faucet.polygon.technology">Moralis</a> <br />
+          <a href=" https://faucet.quicknode.com/base/sepolia">QuickNode</a>
+            {/* <a href="https://faucet.polygon.technology">Moralis</a> <br />
             <a href="https://goerlifaucet.com/">Alchemy</a> <br />
-            <a href=" https://faucet.goerli.linea.build/">Linea</a>
+             */}
           </p>
           <p>THANKS FOR TESTING WITH US</p>
           <br />

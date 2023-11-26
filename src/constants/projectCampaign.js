@@ -279,5 +279,4 @@ const campaignAbi =[
 		"type": "function"
 	}
 ];
-
 export default campaignAbi;

@@ -33,7 +33,6 @@ class Campaigns extends Component {
         ),
       });
       await instance.connect(signer).createCampaign(minimumValue);
-
       this.setState({
         message: (
           <Message info>
